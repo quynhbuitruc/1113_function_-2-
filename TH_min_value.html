@@ -12,19 +12,26 @@
         let arr1 = [3, 5, 1, 8, -3, 7, 8]
         let arr2 = [7, 12, 6, 9, 20, 56, 89]
         let arr3 = []
-        let arr4 = [0, 0, 0, 0, 0, 0]
+        let arr4 = [0, 0, 0, -1, 0, 0]
 
         function minArray(arr) {
             if (arr.length == 0) {
-                alert("Min value of ${arr} is: -1!!!")
+                alert(" Min value of " + arr + " is: -1!!!")
             } else {
                 let min = arr[0]
-                for (let i = 1; i < arr.length; i++) {
-                    if (arr[1] < min) {
-                        min = arr[1]
+                let i
+                let count
+                for (i = 1; i < arr.length; i++) {
+                    if (arr[i] < min) {
+                        min = arr[i]
+                        count = arr.indexOf(min)
                     }
                 }
-                alert(" Min value of " + arr + " is: " + min)
+                if (min !== -1) {
+                    alert(" Min value of " + arr + " is: " + min)
+                } else {
+                    alert(" Min value is: " + min + " & its position in the array is: " + count)
+                }
             }
         }
 
