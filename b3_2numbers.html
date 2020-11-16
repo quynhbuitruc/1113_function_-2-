@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number1 = Number(prompt("Number 1 is:"))
+        let number2 = Number(prompt("Number 2 is:"))
+        let sumTwoNumbers
+
+        if (number1 > number2) {
+            alertMessage(number1, number2)
+        } else {
+            sumTwoNumbers = sum(number1, number2)
+            alert(sumTwoNumbers)
+        }
+
+        function alertMessage(no1, no2) {
+            alert(no1 + " is bigger than " + no2)
+        }
+
+        function sum(x, y) {
+            return x + y
+        }
+    </script>
+</body>
+
+</html>
